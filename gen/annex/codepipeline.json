@@ -1,0 +1,11 @@
+{
+  "metadata": {
+    "serviceAbbreviation": "CodePipeline"
+  },
+  "shapes": {
+    "ActionRevision": {
+      "type": "structure",
+      "required": ["revisionId"]
+    }
+  }
+}
