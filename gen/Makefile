@@ -46,16 +46,16 @@ format: $(STYLISH)
 	-exec sh -c "printf ' -> %s\n' $1 {}; $(STYLISH) -i {}" \;
 
 $(GENERATE): $(BIN_DIR)
-	stack install --nix amazonka-gen
+	stack install amazonka-gen
 
 $(STYLISH): $(BIN_DIR)
-	stack install --nix stylish-haskell
+	stack install stylish-haskell
 
 $(BIN_DIR):
 	mkdir $@
 
 clean:
-	stack clean --nix
+	stack clean
 	rm -rf $(MODEL_DIR) $(OUT_DIR)/amazonka-*/gen
 
 full-clean: clean
